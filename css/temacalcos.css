@@ -1,0 +1,362 @@
+/*COMETARIO BLOQUE*/
+/*ANIDAMIENTO*/
+/*productos*/
+#grillaproductos {
+  display: grid;
+  grid-template-areas: "nav nav" "sidebar planchas" "sidebar imanes" "footer footer";
+  grid-template-rows: 1fr 3fr 2fr 1fr;
+  grid-template-columns: 15% auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 15px;
+  height: 100vh;
+  margin: 0;
+}
+
+div#planchas {
+  grid-area: planchas;
+}
+
+div#imanes {
+  grid-area: imanes;
+}
+
+#productos {
+  grid-area: productos;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 5;
+  justify-content: center;
+}
+#productos article {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin: 30px;
+  text-align: center;
+  height: 500px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: medium;
+}
+#productos article article p {
+  color: black;
+  font-size: medium;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.articulo {
+  width: 300px;
+  margin: 5px;
+  border-radius: 5px 0px;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+  background-color: #f2f2f2;
+}
+
+.articulo:hover {
+  padding: 30px;
+}
+
+.sidenav {
+  grid-area: sidebar;
+  background-color: rgb(226, 226, 226);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav .sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #4e4e4e;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+.sidenav .sidenav a:hover {
+  color: yellow;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px;
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+/*RESETEO----------------------------------------------------------------------*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 100%;
+  background-color: #6DBFD2;
+}
+
+/*.borde{
+  border: 3px solid black;
+}*/
+/*NAV---------------------------------------------------*/
+/* Solid border */
+.solid {
+  border-bottom: 3px solid yellow;
+}
+
+.bg-navbar {
+  font-weight: bold;
+}
+
+.carrusel {
+  width: 100%;
+  height: 100vw;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(69, 69, 69);
+  color: white;
+  text-align: center;
+}
+
+/*productos------------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+/*index--------------------------------------------------*/
+#grilla {
+  display: grid;
+  grid-template-areas: "nav nav" "header header" "carrusel carrusel" "nosotros objetivos" "footer footer";
+  grid-template-rows: 15% 10% auto;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 1px;
+  grid-column-gap: 0px;
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  grid-area: header;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  color: yellow;
+}
+
+nav {
+  grid-area: nav;
+}
+
+div#carouselExampleCaptions {
+  grid-area: carrusel;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/*contacto*/
+section#nosotros {
+  grid-area: nosotros;
+  background-color: rgb(80, 155, 190);
+}
+
+#objetivos h1 {
+  color: beige;
+  font-weight: bold;
+}
+
+p {
+  color: azure;
+}
+
+.right {
+  float: right;
+  margin: 10px;
+  width: 300px;
+  padding: 10px;
+}
+
+.col-container {
+  display: table;
+  width: 100%;
+}
+
+.col {
+  display: table-cell;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+#nosotros h1 {
+  color: yellow;
+}
+
+section#objetivos {
+  grid-area: objetivos;
+}
+
+/*preguntas-------------------------*/
+#grillapreguntas {
+  display: grid;
+  grid-template-areas: "nav nav" "preguntas preguntas" "consulta consulta" "footer foter ";
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-columns: 50%;
+  grid-row-gap: 10px;
+  grid-column-gap: 15px;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: #e7eb03;
+  font-size: xx-large;
+}
+
+h2 {
+  color: #6DBFD2;
+  font-size: x-large;
+}
+
+div#contacto {
+  grid-area: consulta;
+}
+
+nav {
+  grid-area: nav;
+}
+
+div#accordionFlushExample {
+  grid-area: preguntas;
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+}
+
+footer {
+  grid-area: footer;
+  position: fixed;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #e7eb03;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  #grilla {
+    display: grid;
+    grid-template-areas: "nav" "header" "carrusel" "nosotros" "objetivos" "footer";
+    grid-template-rows: 1fr 3fr 2fr 1fr 1fr;
+    grid-template-columns: 100%;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    height: 100vh;
+    margin: 0;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  header h1 {
+    display: flex;
+    justify-content: center;
+    color: yellow;
+  }
+
+  nav {
+    grid-area: nav;
+  }
+
+  div#carouselExampleCaptions {
+    grid-area: carrusel;
+  }
+
+  footer {
+    grid-area: footer;
+    position: fixed;
+  }
+
+  /*contacto*/
+  section#nosotros {
+    grid-area: nosotros;
+    background-color: rgb(80, 155, 190);
+  }
+
+  #objetivos h1 {
+    color: beige;
+    font-weight: bold;
+  }
+
+  p {
+    color: azure;
+  }
+
+  .right {
+    float: right;
+    margin: 10px;
+    width: 300px;
+    padding: 10px;
+  }
+
+  .col-container {
+    display: flex;
+  }
+
+  .col {
+    display: table-cell;
+    justify-content: end;
+    align-content: end;
+  }
+
+  #nosotros h1 {
+    color: yellow;
+  }
+
+  section#objetivos {
+    grid-area: objetivos;
+  }
+}
+/* Main content */
+.main {
+  margin-left: 200px;
+  /* Same as the width of the sidenav */
+  font-size: 20px;
+  /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/*# sourceMappingURL=temacalcos.css.map */
